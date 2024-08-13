@@ -426,6 +426,7 @@
 "Assets/Scripts/CheckpointManager.cs"
 "Assets/Scripts/Content.cs"
 "Assets/Scripts/ContentController.cs"
+"Assets/Scripts/DoorOpenner.cs"
 "Assets/Scripts/ExperienceController.cs"
 "Assets/Scripts/Guide.cs"
 "Assets/Scripts/ImageController.cs"

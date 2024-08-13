@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/5-NewCorridor.unity
+- path: Assets/Scenes/2-OldCorridor.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
