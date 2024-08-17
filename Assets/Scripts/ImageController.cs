@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ImageController : MonoBehaviour
 {
     public List<ImageSequence> _sequence;
+    public SceneFader _sceneFader;
     public GameObject ImageRenderer1, ImageRenderer2, ImageRenderer3, ImageRenderer4, ImageRenderer5, ImageRenderer6, ImageRenderer7;
 
     private Dictionary<GameObject, Vector3> initialPositions;
@@ -39,25 +41,32 @@ public class ImageController : MonoBehaviour
     }
 
     private IEnumerator ImageAnimations(ImageSequence imageSequence) {
-        GameObject selectedRenderer = GetImageRenderer(imageSequence.ImagePosition);
-        SpriteRenderer spriteRenderer = selectedRenderer.GetComponent<SpriteRenderer>();
+    GameObject selectedRenderer = GetImageRenderer(imageSequence.ImagePosition);
+    SpriteRenderer spriteRenderer = selectedRenderer.GetComponent<SpriteRenderer>();
 
-        spriteRenderer.sprite = imageSequence.Image;
-        spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
-        spriteRenderer.enabled = true;
+    spriteRenderer.sprite = imageSequence.Image;
+    spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
+    spriteRenderer.enabled = true;
 
-        Vector3 initialPosition = initialPositions[selectedRenderer];
-        Vector3 targetPosition = initialPosition + new Vector3(0, 0, -1);
+    Vector3 initialPosition = initialPositions[selectedRenderer];
+    Vector3 targetPosition = initialPosition + new Vector3(0, 0, -1);
 
-        // Move to target position with fade-in
-        yield return StartCoroutine(AnimateImage(selectedRenderer, spriteRenderer, initialPosition, targetPosition, 1.0f, true));
-        
-        // Wait for the duration specified in the ImageSequence
-        yield return new WaitForSeconds(imageSequence.Duration);
-        
-        // Fade-out at the target position and reset position
-        yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
+    // Move to target position with fade-in
+    yield return StartCoroutine(AnimateImage(selectedRenderer, spriteRenderer, initialPosition, targetPosition, 1.0f, true));
+    
+    // Wait for the duration specified in the ImageSequence
+    yield return new WaitForSeconds(imageSequence.Duration);
+    
+    // Fade-out at the target position and reset position
+    yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
+    
+    // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
+    if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
+    {
+        _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
     }
+}
+
 
     private GameObject GetImageRenderer(int position) {
         return position switch
@@ -102,6 +111,19 @@ public class ImageController : MonoBehaviour
         spriteRenderer.sprite = null;
         renderer.transform.position = initialPosition; 
     }
+
+    private IEnumerator ChangeScene(float duration) {
+        float elapsedTime = 0f;
+        Debug.Log("Reset");
+
+        while (elapsedTime < duration) {
+            Debug.Log("Reset");
+            Debug.Log(elapsedTime);
+            yield return elapsedTime;
+        }
+        SceneManager.LoadScene(1);
+    }
+
 
     private void ResetAllRenderers() {
         ImageRenderer1.GetComponent<SpriteRenderer>().sprite = null;

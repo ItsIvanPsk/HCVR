@@ -15,7 +15,7 @@ D:/- Hospital CVR
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63151
+55123
 Successfully changed project path to: D:/- Hospital CVR
 D:/- Hospital CVR
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,13 +49,13 @@ D:/- Hospital CVR
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [74692] Host "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 49402576 [EditorId] 49402576 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C7QJ5IB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [145468] Host "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 1962054166 [EditorId] 1962054166 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C7QJ5IB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [74692] Host "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 49402576 [EditorId] 49402576 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C7QJ5IB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [145468] Host "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 1962054166 [EditorId] 1962054166 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-C7QJ5IB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
-Refreshing native plugins compatible for Editor in 11.46 ms, found 14 plugins.
-Preloading 1 native plugins for Editor in 0.68 ms.
+Refreshing native plugins compatible for Editor in 10.21 ms, found 14 plugins.
+Preloading 1 native plugins for Editor in 0.57 ms.
 Initialize engine version: 2022.3.32f1 (c8300dc0a3fa)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/- Hospital CVR/Assets
@@ -71,47 +71,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56356
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003968 seconds.
-- Loaded All Assemblies, in  0.217 seconds
+Registered in 0.004364 seconds.
+- Loaded All Assemblies, in  0.356 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 266 ms
+Android Extension - Scanning For ADB Devices 313 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.496 seconds
-Domain Reload Profiling: 713ms
-	BeginReloadAssembly (65ms)
+- Finished resetting the current domain, in  0.550 seconds
+Domain Reload Profiling: 905ms
+	BeginReloadAssembly (132ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (88ms)
-		LoadAssemblies (64ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (143ms)
+		LoadAssemblies (134ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (86ms)
-			TypeCache.Refresh (85ms)
-				TypeCache.ScanAssembly (77ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (124ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (497ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (550ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (454ms)
+		SetupLoadedEditorAssemblies (513ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (347ms)
-			SetLoadedEditorAssemblies (2ms)
+			InitializePlatformSupportModulesInManaged (393ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (73ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
+			ProcessInitializeOnLoadAttributes (86ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,8 +119,8 @@ Domain Reload Profiling: 713ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.458 seconds
-Refreshing native plugins compatible for Editor in 5.89 ms, found 14 plugins.
+- Loaded All Assemblies, in  0.712 seconds
+Refreshing native plugins compatible for Editor in 6.14 ms, found 14 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Package Manager log level set to [2]
@@ -176,48 +176,48 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.700 seconds
-Domain Reload Profiling: 2158ms
-	BeginReloadAssembly (100ms)
+- Finished resetting the current domain, in  1.652 seconds
+Domain Reload Profiling: 2363ms
+	BeginReloadAssembly (111ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (22ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (307ms)
-		LoadAssemblies (200ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (549ms)
+		LoadAssemblies (347ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (159ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (116ms)
-			ScanForSourceGeneratedMonoScriptInfo (20ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1700ms)
+		AnalyzeDomain (263ms)
+			TypeCache.Refresh (221ms)
+				TypeCache.ScanAssembly (199ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1653ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1550ms)
+		SetupLoadedEditorAssemblies (1509ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (59ms)
-			ProcessInitializeOnLoadAttributes (1232ms)
-			ProcessInitializeOnLoadMethodAttributes (236ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (1261ms)
+			ProcessInitializeOnLoadMethodAttributes (177ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 5.81 ms, found 14 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 5.66 ms, found 14 plugins.
 Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 6010 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 110 unused Assets / (399.9 KB). Loaded Objects now: 6498.
-Memory consumption went from 218.3 MB to 217.9 MB.
-Total: 5.213800 ms (FindLiveObjects: 0.401900 ms CreateObjectMapping: 0.213700 ms MarkObjects: 4.319000 ms  DeleteObjects: 0.278300 ms)
+Unloading 6011 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 110 unused Assets / (400.1 KB). Loaded Objects now: 6499.
+Memory consumption went from 218.6 MB to 218.2 MB.
+Total: 5.657000 ms (FindLiveObjects: 0.395500 ms CreateObjectMapping: 0.095800 ms MarkObjects: 4.858600 ms  DeleteObjects: 0.306200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -226,6 +226,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/DoorOpenner.cs: cf47ef463ae6bcec76b9971950391ab2 -> 58e10bf98cfa24dec7dfec245c0f6709
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
@@ -235,86 +236,93 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 315697.942496 seconds.
-  path: Assets/Materials/NewHospitalWallColor.mat
-  artifactKey: Guid(da8cd48130f76b94a9c17656e3974b9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/NewHospitalWallColor.mat using Guid(da8cd48130f76b94a9c17656e3974b9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+  Time since last request: 28528.238970 seconds.
+  path: Assets/3D Model/ItsyDev/tv_old_room_HV.fbx
+  artifactKey: Guid(024ef6e8a8d6cec43a60a42e99253898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D Model/ItsyDev/tv_old_room_HV.fbx using Guid(024ef6e8a8d6cec43a60a42e99253898) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: 'e8e613d13ad6104af873c4365b710a89') in 0.055020 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 58.537391 seconds.
-  path: Assets/Materials/NewHospitalWallColor.mat
-  artifactKey: Guid(da8cd48130f76b94a9c17656e3974b9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/NewHospitalWallColor.mat using Guid(da8cd48130f76b94a9c17656e3974b9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: '4b79a4997afb236738af1e4086359ae4') in 0.021803 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1267.676175 seconds.
-  path: Assets/AutoHand/Resources
-  artifactKey: Guid(6c5ac0d0ee95f35468fcbc9ee378f50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AutoHand/Resources using Guid(6c5ac0d0ee95f35468fcbc9ee378f50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: 'bca0b7e8a9ef2432267adbaa73ded956') in 0.000542 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 720.114839 seconds.
-  path: Assets/Images/Nova_imatge_HV_LogoMosca-4.png
-  artifactKey: Guid(e5359e1ad9014784a9fd41dcc11f4c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Nova_imatge_HV_LogoMosca-4.png using Guid(e5359e1ad9014784a9fd41dcc11f4c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: '9129233412a3bfaec282be23334f49aa') in 0.046222 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.770343 seconds.
-  path: Assets/Images/Nova_imatge_HV_LogoMosca-4.png
-  artifactKey: Guid(e5359e1ad9014784a9fd41dcc11f4c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Nova_imatge_HV_LogoMosca-4.png using Guid(e5359e1ad9014784a9fd41dcc11f4c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: 'ec9d39f6b588b66db7f5622c7651e5ad') in 0.031744 seconds
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'cdc0989dc2767abf6ce0f07de227d021') in 0.127557 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 23
 ========================================================================
 Received Import Request.
-  Time since last request: 880.045560 seconds.
-  path: Assets/Scenes/1-SanLorenzo.unity
-  artifactKey: Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/1-SanLorenzo.unity using Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: '0f728c263ca54f1d396c6c93e1c3c532') in 0.000521 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 27.398521 seconds.
-  path: Assets/Scenes/3-OldRoom.unity
-  artifactKey: Guid(9d4344642ded20d438eff9e17e3bb27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/3-OldRoom.unity using Guid(9d4344642ded20d438eff9e17e3bb27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: 'c444edc56471648bb84d7430e8a6243e') in 0.000510 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 121.787343 seconds.
+  Time since last request: 1494.713350 seconds.
   path: Assets/Scenes/4-NewRoom.unity
   artifactKey: Guid(5ad63fc187ed5eb408c7a731b1520496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/4-NewRoom.unity using Guid(5ad63fc187ed5eb408c7a731b1520496) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: 'ae08444a8e6b3850fd561510b856007a') in 0.000479 seconds
+ -> (artifact id: '085b8331bff350b0f4208bdef5ef971c') in 0.000411 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.613822 seconds.
-  path: Assets/Scenes/5-NewCorridor.unity
-  artifactKey: Guid(9f03c2ab66edcd34cbb06322ec708103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/5-NewCorridor.unity using Guid(9f03c2ab66edcd34cbb06322ec708103) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
- -> (artifact id: '9964859702af1e7e76222f8cb239a2f6') in 0.000377 seconds
+  Time since last request: 49.728567 seconds.
+  path: Assets/Scenes/3-OldRoom.unity
+  artifactKey: Guid(9d4344642ded20d438eff9e17e3bb27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/3-OldRoom.unity using Guid(9d4344642ded20d438eff9e17e3bb27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'acf88d0c4d23753d930211e75aee3c86') in 0.000477 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.970333 seconds.
+  path: Assets/Scenes/00-InitialScene.unity
+  artifactKey: Guid(78a9908361269d047b4316effd0141a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/00-InitialScene.unity using Guid(78a9908361269d047b4316effd0141a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '1e1b2bfe0b57bc7b1349c2f77b38d7a2') in 0.000341 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.667184 seconds.
+  path: Assets/Scenes/1-HospitalHistory.unity
+  artifactKey: Guid(ba70dc467761ff240b6631a9d81f1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/1-HospitalHistory.unity using Guid(ba70dc467761ff240b6631a9d81f1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '985dfd9a9570e6cf4a744cf6446812a2') in 0.000340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 72.255887 seconds.
+  path: Assets/Scenes/0-InitialScene.unity
+  artifactKey: Guid(78a9908361269d047b4316effd0141a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/0-InitialScene.unity using Guid(78a9908361269d047b4316effd0141a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '869b549e3e1bd3b82114548032f0709c') in 0.000355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.539333 seconds.
+  path: Assets/Scenes/-SanLorenzo.unity
+  artifactKey: Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/-SanLorenzo.unity using Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '307ab0b3ab485975c55183be460d2f8c') in 0.000359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.917772 seconds.
+  path: Assets/Scenes/3-OldCorridor.unity
+  artifactKey: Guid(20ebc634326ae1644b419b1178d811cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/3-OldCorridor.unity using Guid(20ebc634326ae1644b419b1178d811cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'eb79fc9973261852fca4202073aa7882') in 0.000463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.651851 seconds.
+  path: Assets/Scenes/2-SanLorenzo.unity
+  artifactKey: Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/2-SanLorenzo.unity using Guid(78f1ec4f5c0270b48b44611ec61fa6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '12b4ebc045265cbd808c8afa1e542f07') in 0.000463 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
