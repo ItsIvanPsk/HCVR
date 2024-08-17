@@ -41,32 +41,31 @@ public class ImageController : MonoBehaviour
     }
 
     private IEnumerator ImageAnimations(ImageSequence imageSequence) {
-    GameObject selectedRenderer = GetImageRenderer(imageSequence.ImagePosition);
-    SpriteRenderer spriteRenderer = selectedRenderer.GetComponent<SpriteRenderer>();
+        GameObject selectedRenderer = GetImageRenderer(imageSequence.ImagePosition);
+        SpriteRenderer spriteRenderer = selectedRenderer.GetComponent<SpriteRenderer>();
 
-    spriteRenderer.sprite = imageSequence.Image;
-    spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
-    spriteRenderer.enabled = true;
+        spriteRenderer.sprite = imageSequence.Image;
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
+        spriteRenderer.enabled = true;
 
-    Vector3 initialPosition = initialPositions[selectedRenderer];
-    Vector3 targetPosition = initialPosition + new Vector3(0, 0, -1);
+        Vector3 initialPosition = initialPositions[selectedRenderer];
+        Vector3 targetPosition = initialPosition + new Vector3(0, 0, -1);
 
-    // Move to target position with fade-in
-    yield return StartCoroutine(AnimateImage(selectedRenderer, spriteRenderer, initialPosition, targetPosition, 1.0f, true));
-    
-    // Wait for the duration specified in the ImageSequence
-    yield return new WaitForSeconds(imageSequence.Duration);
-    
-    // Fade-out at the target position and reset position
-    yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
-    
-    // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
-    if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
-    {
-        _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
+        // Move to target position with fade-in
+        yield return StartCoroutine(AnimateImage(selectedRenderer, spriteRenderer, initialPosition, targetPosition, 1.0f, true));
+        
+        // Wait for the duration specified in the ImageSequence
+        yield return new WaitForSeconds(imageSequence.Duration);
+        
+        // Fade-out at the target position and reset position
+        yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
+        
+        // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
+        if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
+        {
+            _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
+        }
     }
-}
-
 
     private GameObject GetImageRenderer(int position) {
         return position switch
