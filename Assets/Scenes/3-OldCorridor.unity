@@ -63019,7 +63019,7 @@ MonoBehaviour:
   handRight: {fileID: 589586230}
   handLeft: {fileID: 940411653}
   useMovement: 1
-  maxMoveSpeed: 2.3
+  maxMoveSpeed: 1.5
   moveAcceleration: 10000
   rotationType: 0
   snapTurnAngle: 30

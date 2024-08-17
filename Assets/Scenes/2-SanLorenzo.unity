@@ -17289,7 +17289,7 @@ MonoBehaviour:
   handRight: {fileID: 1255458742}
   handLeft: {fileID: 73586187}
   useMovement: 1
-  maxMoveSpeed: 2.3
+  maxMoveSpeed: 1.5
   moveAcceleration: 10000
   rotationType: 0
   snapTurnAngle: 30
