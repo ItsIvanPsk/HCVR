@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8edae8b29bf24841828308156d0d36e, type: 3}
   m_Name: SQ-5
   m_EditorClassIdentifier: 
-  Id: 1
-  Image: {fileID: 21300000, guid: 4aa0097bb740ce149bfa63066595d275, type: 3}
-  StartingTime: 52
-  ImagePosition: 1
-  Duration: 1
+  Id: 5
+  Image: {fileID: 21300000, guid: 2401744eacb23ae4cafa54cda19fa570, type: 3}
+  StartingTime: 9
+  ImagePosition: 4
+  Duration: 10

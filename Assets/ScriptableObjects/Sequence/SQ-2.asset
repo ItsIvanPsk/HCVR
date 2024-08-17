@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SQ-2
   m_EditorClassIdentifier: 
   Id: 2
-  Image: {fileID: 21300000, guid: ef8caccc3d565bc4da8f538b2dbf33d0, type: 3}
-  StartingTime: 5
-  ImagePosition: 4
-  Duration: 3
+  Image: {fileID: 21300000, guid: 024d1321f9c5e004089c69dcb3bb531f, type: 3}
+  StartingTime: 3
+  ImagePosition: 3
+  Duration: 10
