@@ -1,42 +1,45 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
     [SerializeField] private GameObject _door;
-    [SerializeField] private Vector3 _initialPosition;
-    [SerializeField] private Vector3 _openPosition;
+    [SerializeField] private Vector3 _closedRotation;
+    [SerializeField] private Vector3 _openRotation;
     [SerializeField] private float _duration = 2.0f;
 
     private bool _isOpen = false;
 
     private void Start() {
-        _door.GetComponent<Transform>().Rotate(_initialPosition);
+        _door.transform.eulerAngles = _closedRotation;
     }
 
     public void ToggleDoor()
     {
         if (_isOpen)
         {
-            StartCoroutine(MoveDoor(_openPosition, _initialPosition));
+            StartCoroutine(RotateDoor(_openRotation, _closedRotation));
         }
         else
         {
-            StartCoroutine(MoveDoor(_initialPosition, _openPosition));
+            StartCoroutine(RotateDoor(_closedRotation, _openRotation));
         }
         _isOpen = !_isOpen;
     }
 
-    private IEnumerator MoveDoor(Vector3 fromPosition, Vector3 toPosition)
+    private IEnumerator RotateDoor(Vector3 fromRotation, Vector3 toRotation)
     {
         float elapsedTime = 0f;
+
         while (elapsedTime < _duration)
         {
-            _door.transform.Rotate(-_openPosition/_duration);
+            // Interpola la rotación de la puerta
+            _door.transform.eulerAngles = Vector3.Lerp(fromRotation, toRotation, elapsedTime / _duration);
             elapsedTime += Time.deltaTime;
             yield return null; 
         }
-        _door.transform.position = toPosition;  
+
+        // Asegúrate de que la puerta esté exactamente en la rotación final
+        _door.transform.eulerAngles = toRotation;  
     }
 }
