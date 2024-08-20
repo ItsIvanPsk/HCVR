@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ImageController : MonoBehaviour
 {
-    public List<ImageSequence> _sequence;
-    public SceneFader _sceneFader;
-    public GameObject ImageRenderer1, ImageRenderer2, ImageRenderer3, ImageRenderer4, ImageRenderer5, ImageRenderer6, ImageRenderer7;
+    [SerializeField] private List<ImageSequence> _sequence;
+    [SerializeField] private PathMover _mover;
+    [SerializeField] private SceneFader _sceneFader;
+    [SerializeField] private GameObject ImageRenderer1, ImageRenderer2, ImageRenderer3, ImageRenderer4, ImageRenderer5, ImageRenderer6, ImageRenderer7;
 
     private Dictionary<GameObject, Vector3> initialPositions;
 
@@ -60,11 +61,14 @@ public class ImageController : MonoBehaviour
         // Fade-out at the target position and reset position
         yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
         
-        // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
-        if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
-        {
-            _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
-        }
+        /*
+            // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
+            if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
+            {
+                _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
+            }
+        */
+        _mover.MoveNext();
     }
 
     private GameObject GetImageRenderer(int position) {
