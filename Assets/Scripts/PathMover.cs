@@ -17,10 +17,6 @@ public class PathMover : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Transform>().SetPositionAndRotation(startPosition, startRotation);
-        if (waypoints.Count > 0)
-        {
-            MoveToNextWaypoint();
-        }
     }
 
     void Update()
@@ -65,12 +61,13 @@ public class PathMover : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
-        waitingForNextMove = true; // Listo para moverse al siguiente waypoint cuando se llame a MoveNext
+        waitingForNextMove = true;
     }
 
     public void MoveNext()
     {
-        if (waitingForNextMove && currentWaypointIndex < waypoints.Count - 1)
+        Debug.Log(waitingForNextMove);
+        if (waitingForNextMove && currentWaypointIndex < waypoints.Count)
         {
             currentWaypointIndex++;
             waitingForNextMove = false;
