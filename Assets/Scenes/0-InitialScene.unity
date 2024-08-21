@@ -10681,6 +10681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CP-2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7063662264686918353, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16477,7 +16481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3877941778394004819, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.09
+      value: 43.04
       objectReference: {fileID: 0}
     - target: {fileID: 3877941778394004819, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16518,6 +16522,10 @@ PrefabInstance:
     - target: {fileID: 4058604278516141719, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
       propertyPath: m_Name
       value: CP-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063662264686918353, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23282,6 +23290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CP-2
       objectReference: {fileID: 0}
+    - target: {fileID: 7063662264686918353, guid: 58e350f56bb10be47b1b4b35a2339345, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26768,7 +26780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429425504673635742, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.07
+      value: 1.705
       objectReference: {fileID: 0}
     - target: {fileID: 8429425504673635742, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27367,6 +27379,10 @@ PrefabInstance:
     - target: {fileID: 5150436694143678196, guid: e7820b4864c6fee4186e4b49bad03f34, type: 3}
       propertyPath: m_Name
       value: SCP
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502879872457730336, guid: e7820b4864c6fee4186e4b49bad03f34, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

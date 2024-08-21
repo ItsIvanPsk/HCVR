@@ -19,7 +19,7 @@ public class ImageController : MonoBehaviour
     }
 
     private void Start() {
-        StartCoroutine(IntroGuide(55));
+        StartCoroutine(IntroGuide(5));
         foreach (var imageSequence in _sequence) {
             StartCoroutine(ScheduleImage(imageSequence));
         }
@@ -118,20 +118,8 @@ public class ImageController : MonoBehaviour
         }
         _mover.MoveNext();
         _tutorialManager.LoadIntroGuide();
-        StartCoroutine(MoveToMeHandler(15));
     }
 
-    private IEnumerator MoveToMeHandler(float duration) {
-        while (true)
-        {
-            float elapsedTime = 0f;
-            while (elapsedTime < duration) {
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            _tutorialManager.LoadComeWithMeAudio();
-        }
-    }
 
     private void ResetAllRenderers() {
         ImageRenderer1.GetComponent<SpriteRenderer>().sprite = null;
