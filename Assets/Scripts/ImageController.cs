@@ -7,6 +7,7 @@ public class ImageController : MonoBehaviour
 {
     [SerializeField] private List<ImageSequence> _sequence;
     [SerializeField] private PathMover _mover;
+    [SerializeField] private TutorialRoomManager _tutorialManager;
     [SerializeField] private SceneFader _sceneFader;
     [SerializeField] private GameObject ImageRenderer1, ImageRenderer2, ImageRenderer3, ImageRenderer4, ImageRenderer5, ImageRenderer6, ImageRenderer7;
 
@@ -18,6 +19,7 @@ public class ImageController : MonoBehaviour
     }
 
     private void Start() {
+        StartCoroutine(IntroGuide(55));
         foreach (var imageSequence in _sequence) {
             StartCoroutine(ScheduleImage(imageSequence));
         }
@@ -39,6 +41,7 @@ public class ImageController : MonoBehaviour
     private IEnumerator ScheduleImage(ImageSequence imageSequence) {
         yield return new WaitForSeconds(imageSequence.StartingTime);
         StartCoroutine(ImageAnimations(imageSequence));
+        
     }
 
     private IEnumerator ImageAnimations(ImageSequence imageSequence) {
@@ -60,15 +63,6 @@ public class ImageController : MonoBehaviour
         
         // Fade-out at the target position and reset position
         yield return StartCoroutine(FadeOutImage(selectedRenderer, spriteRenderer, initialPosition, 1.0f));
-        
-        /*
-            // Aquí llamamos a SceneFader para realizar el cambio de escena con FadeOut
-            if (_sequence.IndexOf(imageSequence) == _sequence.Count - 1) // Si es la última imagen
-            {
-                _sceneFader.FadeToScene(1); // Cambia el "1" por el índice de la escena que deseas cargar
-            }
-        */
-        _mover.MoveNext();
     }
 
     private GameObject GetImageRenderer(int position) {
@@ -115,18 +109,29 @@ public class ImageController : MonoBehaviour
         renderer.transform.position = initialPosition; 
     }
 
-    private IEnumerator ChangeScene(float duration) {
+    private IEnumerator IntroGuide(float duration) {
         float elapsedTime = 0f;
-        Debug.Log("Reset");
 
         while (elapsedTime < duration) {
-            Debug.Log("Reset");
-            Debug.Log(elapsedTime);
-            yield return elapsedTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
-        SceneManager.LoadScene(1);
+        _mover.MoveNext();
+        _tutorialManager.LoadIntroGuide();
+        StartCoroutine(MoveToMeHandler(15));
     }
 
+    private IEnumerator MoveToMeHandler(float duration) {
+        while (true)
+        {
+            float elapsedTime = 0f;
+            while (elapsedTime < duration) {
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            _tutorialManager.LoadComeWithMeAudio();
+        }
+    }
 
     private void ResetAllRenderers() {
         ImageRenderer1.GetComponent<SpriteRenderer>().sprite = null;

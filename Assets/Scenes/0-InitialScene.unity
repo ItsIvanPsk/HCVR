@@ -153,6 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c6280ec151237429b152dbafe5f369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _comeWithMe: {fileID: 0}
+  _introGuide: {fileID: 0}
+  _guide: {fileID: 0}
+  _mover: {fileID: 0}
+  _sceneFader: {fileID: 0}
 --- !u!4 &8300674
 Transform:
   m_ObjectHideFlags: 0
@@ -27351,6 +27356,10 @@ PrefabInstance:
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 231915582}
+    - target: {fileID: 1075257394801238131, guid: e7820b4864c6fee4186e4b49bad03f34, type: 3}
+      propertyPath: sceneIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3250065853563850414, guid: e7820b4864c6fee4186e4b49bad03f34, type: 3}
       propertyPath: m_IsTrigger
       value: 0
