@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 1
   position: {x: 2.638, y: 0.992, z: 2.119}
   translationTime: 0.1
-  direction: {x: 90, y: 233.81367, z: -53}
+  direction: {x: 90, y: 180, z: 0}
   directionTime: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d58a6f97f44df54386cbc74a416b52c, type: 3}
-  m_Name: W1-2
+  m_Name: W1-3
   m_EditorClassIdentifier: 
-  id: 2
+  id: 3
   position: {x: -0.062, y: 0.992, z: 2.534}
   translationTime: 2
   direction: {x: 90, y: 180, z: 0}

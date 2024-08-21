@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/0-InitialScene.unity
+    guid: 78a9908361269d047b4316effd0141a2
+  - enabled: 1
     path: Assets/Scenes/1-HospitalHistory.unity
     guid: ba70dc467761ff240b6631a9d81f1804
   - enabled: 1
@@ -14,15 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3-OldCorridor.unity
     guid: 20ebc634326ae1644b419b1178d811cb
-  - enabled: 0
-    path: Assets/Scenes/3-OldRoom.unity
-    guid: 9d4344642ded20d438eff9e17e3bb27d
   - enabled: 1
     path: Assets/Scenes/4-NewRoom.unity
     guid: 5ad63fc187ed5eb408c7a731b1520496
-  - enabled: 0
-    path: Assets/Scenes/5-NewCorridor.unity
-    guid: 9f03c2ab66edcd34cbb06322ec708103
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b82b2fe8602110149ba7208b1e5148fe, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd624eed2d94c7d409fe6a03523b9b20, type: 2}

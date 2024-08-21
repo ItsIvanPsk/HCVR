@@ -40411,7 +40411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 0}
-  sceneIndex: 2
+  sceneIndex: 3
 --- !u!114 &3376207822792450276
 MonoBehaviour:
   m_ObjectHideFlags: 0
