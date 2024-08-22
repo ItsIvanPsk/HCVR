@@ -27,12 +27,12 @@ public class RoomManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null; 
         }
-        _sceneFader.FadeToScene(3);
+        _sceneFader.FadeToScene(4);
     }
 
     private IEnumerator HandlePlayerRoomAudio(float duration) {
         float elapsedTime = 0f;
-        while (elapsedTime < duration + 1)
+        while (elapsedTime < duration + 30)
         {
             elapsedTime += Time.deltaTime;
             yield return null; 

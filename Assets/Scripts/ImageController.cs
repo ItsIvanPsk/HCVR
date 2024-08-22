@@ -19,7 +19,7 @@ public class ImageController : MonoBehaviour
     }
 
     private void Start() {
-        StartCoroutine(IntroGuide(5));
+        StartCoroutine(IntroGuide(55));
         foreach (var imageSequence in _sequence) {
             StartCoroutine(ScheduleImage(imageSequence));
         }
