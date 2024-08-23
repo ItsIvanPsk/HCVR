@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] private Vector3 InitialPosition;
+    [SerializeField] private Quaternion InitialRotation;
+
     public string SessionId { get; set; }
     public CheckpointManager _checkpointManager { get; set; }
 
@@ -14,22 +17,10 @@ public class PlayerManager : MonoBehaviour
     private void Start() {
         _apiController = new ApiController();     
         CreateNewSession();
+        GetComponent<Transform>().SetPositionAndRotation(InitialPosition, InitialRotation);
     }
 
     public async void CreateNewSession() {
         SessionId = await _apiController.CreateSessionId();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            pathMover.StartMovement(); // Iniciar movimiento al presionar Space
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            pathMover.StopMovement(); // Detener movimiento al presionar S
-        }
     }
 }
