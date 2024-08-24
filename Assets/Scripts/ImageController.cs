@@ -7,7 +7,10 @@ public class ImageController : MonoBehaviour
 {
     [SerializeField] private List<ImageSequence> _sequence;
     [SerializeField] private PathMover _mover;
-    [SerializeField] private TutorialRoomManager _tutorialManager;
+    [SerializeField] private Guide _guide;
+    [SerializeField] private AudioClip _historyAudio;
+    [SerializeField] private AudioClip _finalAudio;
+    [SerializeField] private HistoryRoomManager _historyRoomManager;
     [SerializeField] private SceneFader _sceneFader;
     [SerializeField] private GameObject ImageRenderer1, ImageRenderer2, ImageRenderer3, ImageRenderer4, ImageRenderer5, ImageRenderer6, ImageRenderer7;
 
@@ -19,7 +22,7 @@ public class ImageController : MonoBehaviour
     }
 
     private void Start() {
-        StartCoroutine(IntroGuide(55));
+        StartCoroutine(LoadIntroAudio());
         foreach (var imageSequence in _sequence) {
             StartCoroutine(ScheduleImage(imageSequence));
         }
@@ -41,7 +44,38 @@ public class ImageController : MonoBehaviour
     private IEnumerator ScheduleImage(ImageSequence imageSequence) {
         yield return new WaitForSeconds(imageSequence.StartingTime);
         StartCoroutine(ImageAnimations(imageSequence));
-        
+    }
+
+    public IEnumerator LoadIntroAudio() {
+        float elapsedTime = 0f;
+
+        var audio = _guide.GetComponent<AudioSource>();
+        audio.Stop();
+        audio.clip = _historyAudio;
+        audio.Play();
+
+        var duration = _historyAudio.length + 1;
+
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _mover.MoveNext();
+
+        audio.Stop();
+        audio.clip = _finalAudio;
+        audio.Play();
+
+        duration = _finalAudio.length + 1;
+        elapsedTime = 0f;
+
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _historyRoomManager.ChangeScene();
     }
 
     private IEnumerator ImageAnimations(ImageSequence imageSequence) {
@@ -107,17 +141,6 @@ public class ImageController : MonoBehaviour
         spriteRenderer.color = targetColor;
         spriteRenderer.sprite = null;
         renderer.transform.position = initialPosition; 
-    }
-
-    private IEnumerator IntroGuide(float duration) {
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        _mover.MoveNext();
-        _tutorialManager.LoadIntroGuide();
     }
 
 

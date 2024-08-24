@@ -13,7 +13,7 @@ public class CheckpointManager : MonoBehaviour
     public void ChangeActualCheckpoint(int checkpointId) {
         ActualCheckpoint = checkpointId;
         Debug.Log(ActualCheckpoint);
-        SetCheckpoint();
+        // SetCheckpoint();
     }
 
     private async void SetCheckpoint() {
