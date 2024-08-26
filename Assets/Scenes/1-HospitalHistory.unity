@@ -6491,7 +6491,7 @@ Transform:
   m_GameObject: {fileID: 399931929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.067, y: 0, z: 0.18}
+  m_LocalPosition: {x: -0.067, y: -0.245, z: 0.18}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14473,37 +14473,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1026875287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1026875288}
-  m_Layer: 0
-  m_Name: Bordes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1026875288
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026875287}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65204877, y: -8.486559, z: 13.135657}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038902880
 GameObject:
   m_ObjectHideFlags: 0
@@ -21187,6 +21156,14 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6574585750597411727, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3adee0e8ea15d4148a68a14e773c8f1b, type: 2}
+    - target: {fileID: 7907370772740927592, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3adee0e8ea15d4148a68a14e773c8f1b, type: 2}
     - target: {fileID: 8429425504673635742, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.012158
@@ -21205,7 +21182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429425504673635742, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.992
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8429425504673635742, guid: 810e49eb86703a54a88750b9a7879ae9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22582,7 +22559,7 @@ Transform:
   m_GameObject: {fileID: 1567948532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.746, z: 0}
+  m_LocalPosition: {x: -1.32, y: 0.501, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30366,7 +30343,7 @@ PrefabInstance:
     - target: {fileID: 6629996230975179178, guid: 1ffedd48273406d4fba819563abce498, type: 3}
       propertyPath: _historyAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 95f5182eaa545a1458dc88dbca07dfba, type: 3}
+      objectReference: {fileID: 8300000, guid: e7ff243411dbe4d4cab5c870c02d1838, type: 3}
     - target: {fileID: 6629996230975179178, guid: 1ffedd48273406d4fba819563abce498, type: 3}
       propertyPath: ImageRenderer5
       value: 
@@ -30479,4 +30456,3 @@ SceneRoots:
   - {fileID: 1489189440}
   - {fileID: 637492086}
   - {fileID: 399931933}
-  - {fileID: 1026875288}

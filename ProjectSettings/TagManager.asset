@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Checkpoint
   - Roof
+  - CheckpointBlocker
   layers:
   - Default
   - TransparentFX

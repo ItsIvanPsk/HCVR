@@ -65,7 +65,6 @@ public class PathMover : MonoBehaviour
 
     public void MoveNext()
     {
-        Debug.Log(waitingForNextMove);
         if (waitingForNextMove && currentWaypointIndex < waypoints.Count)
         {
             currentWaypointIndex++;

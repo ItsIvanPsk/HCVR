@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/9861066-textura-de-pared-de-piedra-para-los-diseñadores-y-artistas-3d.jpg.meta
+guid: bc239d7e0ef8f3743af7ca06a3fd3a93
+========
 guid: 8188ff2b4d65148449a3414c28ea2236
+>>>>>>>> de1c306c (Content Update):Assets/3D Model/tile.jpg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
