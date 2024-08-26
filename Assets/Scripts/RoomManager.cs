@@ -49,7 +49,7 @@ public class RoomManager : MonoBehaviour
 
     private IEnumerator HandlePlayerRoomAudio(float duration) {
         float elapsedTime = 0f;
-        while (elapsedTime < duration + 30)
+        while (elapsedTime < duration + 15)
         {
             elapsedTime += Time.deltaTime;
             yield return null; 

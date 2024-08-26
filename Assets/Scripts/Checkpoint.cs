@@ -14,26 +14,18 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private bool _openDoor;
     [SerializeField] private DoorOpener? _doorOpener;
 
-    // Define eventos de colisión
     public CollisionEvent OnCollisionEnterEvent;
     public CollisionEvent OnCollisionExitEvent;
 
     private void OnCollisionEnter(Collision other)
     {
         OnCollisionEnterEvent?.Invoke(other);
-
-        _checkpointManager.ChangeActualCheckpoint(_checkpointId);
-        DisableCheckpoint(other.gameObject);
-        if (_openDoor)
-        {
-            OpenDoor();
+        if (_content != null) {
+            _guide.GetComponent<AudioSource>().Stop();
+            _guide.GetComponent<AudioSource>().clip = _content.audio;
+            _guide.GetComponent<AudioSource>().Play();
         }
-        _mover.MoveNext();
-    }
-
-    private void OpenDoor()
-    {
-        _doorOpener?.ToggleDoor();
+        DisableCheckpoint(other.gameObject);
     }
 
     private void DisableCheckpoint(GameObject col)

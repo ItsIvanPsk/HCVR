@@ -11,7 +11,6 @@ public class PathMover : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool isMoving = false;
     private bool waitingForNextMove = true;
-
     private float lerpTime = 0f;
 
     void Start()
