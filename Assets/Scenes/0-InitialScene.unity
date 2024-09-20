@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 924577477}
   _firstCheckpoint: {fileID: 1696491821}
-  TimesPressed: 0
+  _timesPressed: 0
 --- !u!114 &8300678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8300677}
         m_TargetAssemblyTypeName: ExperienceStartManager, Assembly-CSharp
-        m_MethodName: AddTimePressed
+        m_MethodName: LoadExperience
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
