@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 2-FACHADA-1
   m_EditorClassIdentifier: 
   CheckpointId: 5
-  audio: {fileID: 8300000, guid: 1a842cedc68f10a43a6bf12216101cc4, type: 3}
+  audio: {fileID: 8300000, guid: 526faef262172d0419a00c1d108b10c6, type: 3}

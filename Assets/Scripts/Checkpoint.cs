@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,41 +11,41 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private CheckpointManager _checkpointManager;
     [SerializeField] private PathMover _mover;
     [SerializeField] private int _checkpointId;
+    [SerializeField] private GameObject _nextCheckpoint;
     [SerializeField] private Content _content;
     [SerializeField] private Guide _guide;
     [SerializeField] private bool _openDoor;
     [SerializeField] private DoorOpener? _doorOpener;
 
-    // Define eventos de colisión
     public CollisionEvent OnCollisionEnterEvent;
     public CollisionEvent OnCollisionExitEvent;
 
     private void OnCollisionEnter(Collision other)
     {
-        OnCollisionEnterEvent?.Invoke(other);
-
-        _checkpointManager.ChangeActualCheckpoint(_checkpointId);
-        DisableCheckpoint(other.gameObject);
-        if (_openDoor)
-        {
-            OpenDoor();
+        if (gameObject.CompareTag("Checkpoint")) {
+            OnCollisionEnterEvent?.Invoke(other);
+            DisableCheckpoint(other.gameObject);
         }
-        _mover.MoveNext();
-    }
-
-    private void OpenDoor()
-    {
-        _doorOpener?.ToggleDoor();
     }
 
     private void DisableCheckpoint(GameObject col)
     {
-        Debug.Log(col.name + " se ha ocultado, checkpoint actual = " + _checkpointId);
         gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         if (_content.audio != null)
         {
             _guide.LoadAudio(_content.audio);
+            StartCoroutine(DisableNextBlocker(_content.audio.length));
         }
+    }
+
+    public IEnumerator DisableNextBlocker(float duration) {
+        var elapsedTime = 0f;
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        _nextCheckpoint.GetComponent<BoxCollider>().enabled = false;
+        _nextCheckpoint.GetComponent<MeshRenderer>().enabled = false;
     }
 }

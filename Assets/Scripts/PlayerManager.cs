@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour
     private void Start() {
         _apiController = new ApiController();     
         CreateNewSession();
-        GetComponent<Transform>().SetPositionAndRotation(InitialPosition, InitialRotation);
+        gameObject.GetComponent<Transform>().SetPositionAndRotation(InitialPosition, InitialRotation);
     }
 
     public async void CreateNewSession() {

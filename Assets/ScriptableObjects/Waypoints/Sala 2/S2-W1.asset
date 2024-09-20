@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S2-W1
   m_EditorClassIdentifier: 
   id: 1
-  position: {x: -0.22, y: 2.57, z: -14.936}
-  translationTime: 3
-  direction: {x: 90, y: -52, z: -52}
+  position: {x: 3.924, y: 3.25, z: -11.893}
+  translationTime: 1
+  direction: {x: 90, y: 90, z: 0}
   directionTime: 1

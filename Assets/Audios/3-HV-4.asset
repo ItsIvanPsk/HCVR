@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 3-HV-4
   m_EditorClassIdentifier: 
   CheckpointId: 10
-  audio: {fileID: 8300000, guid: c781853bad7a3714784f5c9b8985bf28, type: 3}
+  audio: {fileID: 8300000, guid: 6bc5bfd7faa416942b01298d2e83adec, type: 3}

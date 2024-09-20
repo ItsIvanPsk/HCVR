@@ -16,6 +16,7 @@ public class DoorOpener : MonoBehaviour
 
     public void ToggleDoor()
     {
+        Debug.Log("[DoorOpener] - " + _isOpen);
         if (_isOpen)
         {
             StartCoroutine(RotateDoor(_openRotation, _closedRotation));
@@ -33,13 +34,11 @@ public class DoorOpener : MonoBehaviour
 
         while (elapsedTime < _duration)
         {
-            // Interpola la rotación de la puerta
             _door.transform.eulerAngles = Vector3.Lerp(fromRotation, toRotation, elapsedTime / _duration);
             elapsedTime += Time.deltaTime;
             yield return null; 
         }
 
-        // Asegúrate de que la puerta esté exactamente en la rotación final
         _door.transform.eulerAngles = toRotation;  
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1-HISTORIA-1
   m_EditorClassIdentifier: 
   CheckpointId: 3
-  audio: {fileID: 8300000, guid: e7ff243411dbe4d4cab5c870c02d1838, type: 3}
+  audio: {fileID: 8300000, guid: 0e56948edb803eb4fbf76c3b00323220, type: 3}
